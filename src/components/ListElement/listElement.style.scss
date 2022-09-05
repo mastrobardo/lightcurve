@@ -1,0 +1,11 @@
+@import url('../../sass/_typographic.scss');
+
+.list-component {
+    ul {
+        &:not(.primary) {
+            list-style-type: none;
+            padding: 0;
+        }
+    }
+   
+}
