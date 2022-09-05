@@ -1,51 +1,56 @@
 ***For windows users: ***   
- `npm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"`     
-
-Some shell scripts were inclluded to render reviewers life easier    
+ `npm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"` and use git bash       
 
 ----    
 **Note about tech used**   
-Classic setup here, nothing fancy: React, redux-toolkit, jest. I love redux toolkit as comes with reselect included ( hence, all queries and selectors will be memoised by default). ALso, we can change property on state directly as immer is taking care of immutabilty. useQuery is one of my prefered new tools.
+Classic setup here, nothing fancy: React, redux-toolkit, jest, testing library. I love redux toolkit as comes with reselect included ( hence, all queries and selectors will be memoised by default). ALso, we can change property on state directly as immer is taking care of immutabilty.
 
 -----
 
-**Testing**    
-Only unit testing, and with an integration test approach ( as per redux guidelines on testing ). I wanted to add some e2e today, as i love cypress, but i found myself fighting with the new version which seems actually incompatible with jest. So no end to end tests. However, there was the intention to add them.    
+**IMPORTANT: MOBILE ONLY**
+As per general good practice, i started with a mobile first approach. In the end, i didnt add any desktop styling. Be sure to test the app from a mobile device. 
+
+**Testing**
+Only unit testing, and with an integration test approach ( as per redux guidelines on testing ). I think this approach remove some burden from higher steps in the testing pyramid. And the whole process get faster
 
 ----
 **Styling**    
-i didnt create mixins or color tables, but they would have been needed in any professional projects. I planned to clean up those at the end, but lack of time kinda mess up my plan.
+A mix of custom css and tailwind, which i nnever used before but it is incredibly fast for certain jobs
 
 ----
-**Game Detail Page**   
-I love UX, but im a terrible designer. Tags got random color ( and are not picked up from a map ), to give at least some life to mybad design. Which is responsive though, as the rest of the site.     
+**The Recursion problem**   
+The first half of the test was all about recursion ( asset field was particulary nasty). While i save the laoded data as is, i derived the correct form for the selected and opened info modal. You will notice that a recursion is used also in listElement, as the format for asset field may change from record to record   
 
 ----
-**Designs and testing design**    
-If you use chrome emulator, please use IphoneXR. Other, older emulated device have a strange bug when injecting size in the Dom Model. I usually test from real device though, so you might find the design for wider screen a bit lacking. Anyway real device shpuld be used also during development, and miuch more in testing.
+**The Form**   
+I noticed too late i could have used `useReducer` instead of the various `useState`. I also used alerts ( shame on me ), to dont have to design another component and to speed up test of the page. i use an online service and a ´flip the coin' startegy for succeful or erroneous responses.
+
+----
+**Designs**    
+I'm not a designer, so apologies for the bad design. Also, it is a MOBILE ONLY design!    
 
 ----
 **Development and production**
-I created a couple of scripts to render everything a bit easier. Anyway, DEV is using json-server as api a server, hence i had to modify a bit the data json to render it compatible.
-Anyway, rememeber:   
+For dev version:   
 `npm i`   
-`npm run server:start`    
 `npm run dev`      
 
-For production, i created a small api server deployed on heroku ( see scripts in package.json ). My idea was to host an instance of the app on heroku, but not having the proper rights i could not do it. 
-For production:   
+For production   
 `npm i`   
 `npm run build`    
 `npm run start`    
-this will connect to the api server deployed on heroku
-<!-- blank line -->
-Or, you could use `start-dev.sh` or `start-prod.sh` (remeber to `chmod +x` them) to make your life easier :)    
+If your telephone is connected on the same network, you will be able to connect to the local app. 
 
-----
-The project is lacking in many aspects, but i hope it will give you at least a rough idea of what i'm able to do.    
+
+-----
+However, i also deployed the app on heroku at this url https://lightcurve-official.herokuapp.com/, it may be easier to access it like this
+
+-----
+
+I apologise for the great delay ( due to some medical issues for me and my wife as well), and i'm conscious you might have already filled the position, nevertheless i wanted  to finish this test as i usually want to see the end of what i start    
 
 Thank you very much for the attention,
-have a nice day, dear reviewer!     
+have a nice day, and apologies again for the delay!     
 
 ----
 
