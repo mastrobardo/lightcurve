@@ -35,6 +35,7 @@ test('it shold call an interval when the button is clicked', async () => {
   const { container } = renderWithProviders(<Home />,  {
     preloadedState: {
       data: {
+        //@ts-ignore
         data:rawList,
         //@ts-ignore
         autoPlay: true
