@@ -1,0 +1,26 @@
+.formpage {
+    .form {
+        padding: 5%;
+    }
+
+    input, select {
+        margin: 5% 0;
+    }
+    .inputs__required {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-self: flex-start;
+        justify-content: space-between;
+    }
+
+    #gender {
+        max-width: 30%;
+        margin-left: 3%;
+    }
+
+    .submit {
+        width: 100px;
+        height: 50px;
+    }
+}
