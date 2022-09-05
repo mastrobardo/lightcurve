@@ -1,0 +1,16 @@
+.error {
+    margin: 0 auto;
+    top: 30%;
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    stroke-width: 2px;
+    color: #000000;
+    background: linear-gradient(90deg, rgb(173, 11, 140) 0%, rgb(210, 12, 46) 100%);
+    text-align: center;
+    /* color: #FFFFFF; */
+    -webkit-text-stroke: 2px #d9a3ff;
+}
