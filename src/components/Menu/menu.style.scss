@@ -1,0 +1,14 @@
+.menu {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 4%;
+    font-size: 24px;
+    justify-content: space-between;
+    width: 80%;
+    button {
+        flex-grow: 1;
+        margin: 3%;
+        max-width: 40%;
+    }
+}
